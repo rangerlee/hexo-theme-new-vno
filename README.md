@@ -26,6 +26,7 @@ hexo-new-vno
 * `cover-orange` - #FB9C50
 * `cover-slate` - #3D4260
 * `cover-disabled` - 透明
+* `cover-alpha` - 半透明
 
 ### 头像和简介
 

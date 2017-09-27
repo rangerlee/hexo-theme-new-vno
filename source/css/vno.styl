@@ -2,6 +2,14 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+
+@font-face {
+	font-family: 'Scriptina Pro';
+	src: url('../fonts/scriptina_pro-webfont.otf') format('otf'), url('../fonts/scriptina_pro-webfont.woff2') format('woff2'), url('../fonts/scriptina_pro-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 @import "_animate"
 @import "_variables"
 @import "_partial/highlight"
@@ -13,6 +21,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font: inherit;
   vertical-align: baseline;
   line-height: 1.7em;
+  font-weight: lighter;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -50,8 +59,6 @@ table {
 }
 table td:first-child {
    width: 3.5%;
-   text-align: center;
-   color: #CCC9C9;
 } 
 
 body {
@@ -147,8 +154,7 @@ h5 {
 }
 
 p {
-  
-  line-height: 1.7em;
+  line-height: 2.0em;
 }
 
 strong {
@@ -207,12 +213,12 @@ code {
   font-size: .9em;
   vertical-align: bottom;
   word-wrap: break-word;
+  line-height: 2.0em;
 }
 
 pre {
   margin-bottom: 1.3em;
   padding: 1em 2.5%;
-  background: #F2F8FF;
   border: 1px solid #EDF6FD;
   border-radius: 3px;
   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
@@ -400,6 +406,7 @@ i.fa.fa-spinner.fa-spin {
 .post pre {
   width: 95%;
   overflow: auto;
+  margin-top: 16px;
 }
 
 .post hr {
@@ -425,6 +432,10 @@ i.fa.fa-spinner.fa-spin {
   font-size: 2.5em;
   letter-spacing: 4px;
   color: #FFF;
+}
+
+.panel-title a {
+  font-family: "Scriptina Pro";
 }
 
 .panel-subtitle {
@@ -567,6 +578,12 @@ i.fa.fa-spinner.fa-spin {
   background-color: rgba(61, 66, 96, 0.1);
   background-image: -webkit-linear-gradient(-410deg, rgba(61, 66, 96, 0.6) 20%, rgba(21, 23, 34, 0.8));
   background-image: linear-gradient(140deg, rgba(61, 66, 96, 0.6) 20%, rgba(21, 23, 34, 0.8));
+}
+
+.cover-alpha {
+  background-color: rgba(61, 66, 96, 0.1);
+  background-image: -webkit-linear-gradient(-410deg, rgba(61, 66, 96, 0.4) 60%, rgba(21, 23, 34, 0.8));
+  background-image: linear-gradient(140deg, rgba(61, 66, 96, 0.4) 60%, rgba(21, 23, 34, 0.8));
 }
 
 .cover-disabled {
@@ -994,12 +1011,7 @@ input[type="tel"]:-ms-input-placeholder {
     border-width: 2px;
   }
 
-  .panel-cover.panel-cover--collapsed .panel-cover__description {
-    display: none;
-  }
-
   .panel-cover.panel-cover--collapsed .panel-cover__divider {
-    display: none;
     margin: 1em auto;
   }
 
