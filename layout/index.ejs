@@ -6,7 +6,7 @@
       var link = post.link || post.path;
     %>
     <li>
-      <h2 class="post-list__post-title post-title"><a href="<%- config.root %><%- link%>" title="link to post.title"><%= post.title%></a></h2>
+      <h2 class="post-list__post-title post-title"><a href="<%- config.root %><%- link%>" title="<%= __('read') %> <%= post.title%>"><%= post.title%></a></h2>
       <p class="excerpt">
     <% if (post.excerpt){ %>
       <%= strip_html(post.excerpt) %>
