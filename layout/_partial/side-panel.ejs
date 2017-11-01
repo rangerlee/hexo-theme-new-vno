@@ -1,5 +1,5 @@
 
-<header class="panel-cover <%= !is_home()?'panel-cover--collapsed':''%>" style="background-image: url(<%- theme.background.cover %>)">
+<header class="panel-cover <%= !is_home()?'panel-cover--collapsed':''%>" >
   <div class="panel-main">
     <div class="panel-main__inner panel-inverted">
     <div class="panel-main__content">
@@ -35,3 +35,19 @@
     <div class="panel-cover--overlay <%= theme.background.color %>"></div>
   </div> 
 </header>
+<script type="text/javascript">
+var side = document.getElementsByClassName("panel-cover")[0];
+function checkWebp() {
+	try{
+		return(document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') == 0);
+	}catch(err) {
+		return false;
+	}
+};
+
+if(checkWebp()) {
+	side.style.backgroundImage = "url('<%- theme.background.cover %>.webp')";
+} else {
+	side.style.backgroundImage = "url('<%- theme.background.cover %>')";
+}
+</script>
