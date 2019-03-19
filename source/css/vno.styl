@@ -53,14 +53,40 @@ q:before, q:after {
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+  border-image: none;
+  border-collapse: separate;
+  font-size: 16px;
+  line-height: 27px;
+  max-width: 100%;
   width: 100%;
-  table-layout: fixed;
+  background-color: transparent;
+  border-spacing: 0px;
+  border-width: 0px 1px 1px 0px;
+  border-style: solid solid solid solid;
+  border-color: #666;
+  text-align: left;
+  margin-bottom: 12px;
+  margin-top: 16px
 }
-table td:first-child {
-   width: 3.5%;
-} 
+
+table th {
+  padding: 8px;
+  line-height: 20px;
+  font-weight: 700;
+  border-left: 1px solid #666;
+  border-top: 1px solid #666;
+  background-color: rgba(102, 128, 153, 0.05);
+}
+
+table td {
+  vertical-align: top;
+  border-top: 1px solid #666;
+  padding: 8px;
+  line-height: 20px;
+  vertical-align: top;
+  border-top: 1px solid #666;
+  border-left: 1px solid #666;
+}
 
 body {
   width: 100%;
@@ -184,6 +210,7 @@ blockquote {
 
 blockquote p:last-child {
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 ol, ul {
