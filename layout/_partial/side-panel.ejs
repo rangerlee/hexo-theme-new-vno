@@ -6,10 +6,12 @@
 
         <h1 class="panel-cover__title panel-title"><a href="<%= config.root %>" title="<%= __('gohome') %> <%= config.title %>"><%= config.title %></a></h1>
         <% if (config.subtitle) { %>
-        <span class="panel-cover__subtitle panel-subtitle"><%= config.subtitle %></span>
+        <span class="panel-cover__subtitle panel-subtitle"><!-- <%= config.subtitle %> --></span>
         <% } %>
         <hr class="panel-cover__divider" />
-        <p class="panel-cover__description"><%- config.description %></p>
+        <% if (config.subtitle) { %>
+        <p class="panel-cover__description"><%- config.subtitle %></p>
+        <% } %>
         <hr class="panel-cover__divider panel-cover__divider--secondary" />
 
         <div class="navigation-wrapper">
